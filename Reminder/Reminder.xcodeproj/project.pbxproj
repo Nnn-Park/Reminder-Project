@@ -22,6 +22,8 @@
 		FECB26342C33F8CE00D3AC6B /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECB26332C33F8CE00D3AC6B /* ListTableViewCell.swift */; };
 		FECB26362C33F90900D3AC6B /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECB26352C33F90900D3AC6B /* Reusable.swift */; };
 		FECB26382C34243B00D3AC6B /* RegisterTodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECB26372C34243B00D3AC6B /* RegisterTodoTableViewCell.swift */; };
+		FECB26402C353D8A00D3AC6B /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECB263F2C353D8A00D3AC6B /* DateViewController.swift */; };
+		FECB26432C35494C00D3AC6B /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECB26422C35494C00D3AC6B /* TagViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		FECB26332C33F8CE00D3AC6B /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		FECB26352C33F90900D3AC6B /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		FECB26372C34243B00D3AC6B /* RegisterTodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTodoTableViewCell.swift; sourceTree = "<group>"; };
+		FECB263F2C353D8A00D3AC6B /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		FECB26422C35494C00D3AC6B /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 		FECB26062C33E4F400D3AC6B /* Reminder */ = {
 			isa = PBXGroup;
 			children = (
+				FECB26412C35493400D3AC6B /* Tag */,
+				FECB263E2C353D7C00D3AC6B /* Date */,
 				FECB26302C33F77900D3AC6B /* DataBase */,
 				FECB262B2C33F72600D3AC6B /* Register */,
 				FECB262A2C33F72000D3AC6B /* List */,
@@ -130,6 +136,22 @@
 				FECB26312C33F79200D3AC6B /* RealmModel.swift */,
 			);
 			path = DataBase;
+			sourceTree = "<group>";
+		};
+		FECB263E2C353D7C00D3AC6B /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				FECB263F2C353D8A00D3AC6B /* DateViewController.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		FECB26412C35493400D3AC6B /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				FECB26422C35494C00D3AC6B /* TagViewController.swift */,
+			);
+			path = Tag;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +236,8 @@
 				FECB26082C33E4F400D3AC6B /* AppDelegate.swift in Sources */,
 				FECB262F2C33F77300D3AC6B /* RegisterViewController.swift in Sources */,
 				FECB262D2C33F76500D3AC6B /* ListViewController.swift in Sources */,
+				FECB26432C35494C00D3AC6B /* TagViewController.swift in Sources */,
+				FECB26402C353D8A00D3AC6B /* DateViewController.swift in Sources */,
 				FECB26362C33F90900D3AC6B /* Reusable.swift in Sources */,
 				FECB260A2C33E4F400D3AC6B /* SceneDelegate.swift in Sources */,
 				FECB26342C33F8CE00D3AC6B /* ListTableViewCell.swift in Sources */,

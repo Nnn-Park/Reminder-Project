@@ -123,21 +123,23 @@ final class RegisterViewController: BaseViewController {
     }
     
     override func configureView() {
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.black
         
         //        todoTableView.rowHeight = UITableView.automaticDimension
         //        todoTableView.estimatedRowHeight = 100
-        tableView.rowHeight = 100
+        tableView.rowHeight = 80
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(RegisterTodoTableViewCell.self, forCellReuseIdentifier: RegisterTodoTableViewCell.id)
+        tableView.backgroundColor = UIColor.black
         
         navigationItem.title = "새로운 할 일"
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "취소", style: .plain, target: self, action: #selector(cancleButtonClicked))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "추가", style: .plain, target: self, action: #selector(addButtonClicked))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: #selector(addButtonClicked))
         
         memoView.layer.cornerRadius = 10
     }
+
     
     @objc func cancleButtonClicked() {
         navigationController?.popViewController(animated: true)
@@ -177,6 +179,17 @@ extension RegisterViewController: UITableViewDelegate, UITableViewDataSource {
         return registerTitle.allCases.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0: navigationController?.pushViewController(DateViewController(), animated: true)
+        case 1: navigationController?.pushViewController(TagViewController(), animated: true)
+//        case 2:
+//        case 3:
+        default:
+            return
+        }
+    }
+       
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RegisterTodoTableViewCell.id, for: indexPath) as! RegisterTodoTableViewCell
         let registerTitle = registerTitle.allCases[indexPath.row]
@@ -184,5 +197,6 @@ extension RegisterViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
     
 }

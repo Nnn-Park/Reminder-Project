@@ -91,7 +91,7 @@ final class ListViewController: BaseViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        super.viewDidAppear(animated)
         tableView.reloadData()
     }
     
